@@ -1,6 +1,7 @@
 package lab.lab_01;
 
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 
 /**
@@ -9,6 +10,8 @@ import java.io.FileNotFoundException;
  *
  */
 public class SerialRainSensor {
+
+    public char[] getSensorValue;
 
     /** 
      * Init SerialDriver with given serial device
@@ -25,9 +28,10 @@ public class SerialRainSensor {
      * Return the current temperature in Kelvin
      * @return current temperature in Kelvin
      */
-    public static double getSenosrValue(){
-        return SerialRainSensor.getSenosrValue();   
+    public double getSensorValue(){
+        Random rnd = new Random();
 
+        return rnd.nextDouble();   
         
     }
 }

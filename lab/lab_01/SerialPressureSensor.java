@@ -1,6 +1,7 @@
 package lab.lab_01;
 
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 
 /**
@@ -22,9 +23,10 @@ public class SerialPressureSensor {
     }
     
    
-    public static double getSenosrValue(){
-        return SerialPressureSensor.getSenosrValue();
+    public double getSensorValue(){
+        Random rnd = new Random();
 
+        return rnd.nextDouble();   
         
     }
 }
