@@ -11,6 +11,7 @@ import java.util.Random;
  */
 public class SerialPressureSensor {
 
+    double SV = 0;   
     /** 
      * Init SerialDriver with given serial device
      * @param devicename
@@ -24,9 +25,10 @@ public class SerialPressureSensor {
     
    
     public double getSensorValue(){
-        Random rnd = new Random();
+        Random rnd = new Random();        
 
         return rnd.nextDouble();   
-        
+        SV + rnd.nextDouble();
+
     }
 }
