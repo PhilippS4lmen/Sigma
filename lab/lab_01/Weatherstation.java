@@ -7,27 +7,34 @@ public class Weatherstation {
 
 // serialtempature und windspeed als attribut von weatherstation erstellen
     
-   
-    SerialTemperatureDriver STD = new SerialTemperatureDriver("/dev/tty0");
-    SerialWindspeedDriver SWD = new SerialWindspeedDriver("/dev/tty1");
-    SerialPressureSensor SPS = new SerialPressureSensor("/dev/tty2");
-    SerialRainSensor SRS = new SerialRainSensor("/dev/tty3");
-    public Weatherstation()throws FileNotFoundException{
+    private Sensor SerialRainSensor;
+    private Sensor SerialPressureSensor;
+    private Driver SerialTemperatureDriver;
+    private Driver SerialWindspeedDriver;
+
+    /**
+     * @param SerialRainSensor
+     * @param SerialPressureSensor
+     * @param SerialTemperatureDriver
+     */
+    public Weatherstation(Sensor SerialRainSensor, Sensor SerialPressureSensor, Driver SerialTemperatureDriver, Driver SerialWindspeedDriver)throws FileNotFoundException{
+
+        this.SerialRainSensor = SerialRainSensor;
+        this.SerialPressureSensor = SerialPressureSensor;
+        this.SerialTemperatureDriver = SerialTemperatureDriver;
+        this.SerialWindspeedDriver = SerialWindspeedDriver;
 
     }
 
     public void weatherResults()  {
 
-        
-        
-        System.out.println(STD.read());
+        System.out.println(SerialRainSensor.getSensorValue());
+
+        System.out.println(SerialPressureSensor.getSensorValue());
+
+        System.out.println(SerialTemperatureDriver.getDriverValue());
     
-        System.out.println(SWD.currentWindspeed());
+        System.out.println(SerialWindspeedDriver.getDriverValue());
         
-        System.out.println(SPS.getSensorValue());
-        
-        System.out.println(SRS.getSensorValue());
-
-
         }
 }

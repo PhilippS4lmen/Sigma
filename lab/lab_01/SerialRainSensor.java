@@ -9,7 +9,7 @@ import java.util.Random;
  * @author Matthias Füller
  *
  */
-public class SerialRainSensor {
+public class SerialRainSensor implements Sensor {
 
     public char[] getSensorValue;
 

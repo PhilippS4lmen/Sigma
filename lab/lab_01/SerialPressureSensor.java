@@ -9,7 +9,7 @@ import java.util.Random;
  * @author Matthias Füller
  *
  */
-public class SerialPressureSensor {
+public class SerialPressureSensor implements Sensor {
 
     double SV = 0;   
     /** 
@@ -28,7 +28,7 @@ public class SerialPressureSensor {
         Random rnd = new Random();        
 
         return rnd.nextDouble();   
-        SV + rnd.nextDouble();
+       
 
     }
 }

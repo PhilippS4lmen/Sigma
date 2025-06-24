@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Matthias Füller
  *
  */
-public class SerialTemperatureDriver {
+public class SerialTemperatureDriver implements Driver {
 
     /** 
      * Init SerialDriver with given serial device
@@ -25,7 +25,7 @@ public class SerialTemperatureDriver {
      * Return the current temperature in Kelvin
      * @return current temperature in Kelvin
      */
-    public double read() {
+    public double getDriverValue() {
         Random rnd = new Random();
 
         return 273.15 - 20 + 50 * rnd.nextDouble();

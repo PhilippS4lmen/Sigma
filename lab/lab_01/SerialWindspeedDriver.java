@@ -26,7 +26,7 @@ public class SerialWindspeedDriver {
 	 * Return the current windspeed in m/s
 	 * @return current windspeed in m/s
 	 */
-	public double currentWindspeed() {
+	public double getDriverValue() {
 		Random rnd = new Random();
 
 		return 50 * rnd.nextDouble();
