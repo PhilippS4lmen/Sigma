@@ -25,6 +25,7 @@ public class SerialTemperatureDriver implements Driver {
      * Return the current temperature in Kelvin
      * @return current temperature in Kelvin
      */
+    @Override
     public double getDriverValue() {
         Random rnd = new Random();
 

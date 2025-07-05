@@ -11,7 +11,7 @@ import java.util.Random;
  */
 public class SerialPressureSensor implements Sensor {
 
-    double SV = 0;   
+     
     /** 
      * Init SerialDriver with given serial device
      * @param devicename
@@ -24,6 +24,7 @@ public class SerialPressureSensor implements Sensor {
     }
     
    
+    @Override
     public double getSensorValue(){
         Random rnd = new Random();        
 

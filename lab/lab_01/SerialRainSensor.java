@@ -28,6 +28,7 @@ public class SerialRainSensor implements Sensor {
      * Return the current temperature in Kelvin
      * @return current temperature in Kelvin
      */
+    @Override
     public double getSensorValue(){
         Random rnd = new Random();
 
